@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadkexv6643-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadkexv6643-tenant-component
+    app.kubernetes.io/part-of: loadkexv6643-tenant-app
+  name: loadkexv6643-tenant-component
+  namespace: loadkexv6643-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadkexv6643-tenant-component
+    weight: null
+status: {}
